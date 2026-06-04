@@ -173,19 +173,25 @@ h1 {
 
 .summary-wrap {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 118px;
+  grid-template-columns: minmax(0, 1fr) 250px;
   gap: 18px;
   align-items: start;
 }
 
+.summary-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  justify-self: end;
+}
+
 .summary-avatar {
   position: relative;
-  justify-self: end;
   margin: 4px 0 0;
   overflow: hidden;
   border: 1px solid rgba(23, 32, 36, 0.14);
   background: #d9e2e3;
-  aspect-ratio: 0.78 / 1;
+  aspect-ratio: 0.72 / 1;
   cursor: zoom-in;
 }
 
@@ -318,6 +324,25 @@ h1 {
   border: 3px solid var(--surface);
   background: var(--accent);
   box-shadow: 0 0 0 1px var(--line);
+}
+
+.skill-panel {
+  margin: 0 34px 22px;
+  padding: 22px 24px;
+  border: 1px solid rgba(31, 78, 95, 0.16);
+  border-top: 1px solid rgba(31, 78, 95, 0.16);
+  background: var(--soft);
+}
+
+.skill-panel::before,
+.skill-panel::after {
+  display: none;
+}
+
+.skill-panel .eyebrow,
+.skill-panel h2,
+.skill-panel h3 {
+  color: var(--accent);
 }
 
 .intro-section,
@@ -546,6 +571,26 @@ time {
   gap: 6px;
   margin: 0;
   padding-left: 1.1em;
+}
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.skill-groups article {
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.skill-groups h3 {
+  margin-bottom: 5px;
+}
+
+.skill-groups p {
+  margin-bottom: 0;
 }
 
 .gallery-lightbox {
@@ -804,8 +849,12 @@ time {
   }
 
   .summary-wrap {
-    grid-template-columns: minmax(0, 1fr) 22mm;
+    grid-template-columns: minmax(0, 1fr) 47mm;
     gap: 4mm;
+  }
+
+  .summary-photos {
+    gap: 1.6mm;
   }
 
   .summary-avatar {
@@ -920,6 +969,19 @@ time {
     height: 2.8mm;
     border: 0.8mm solid #fff;
     box-shadow: 0 0 0 0.3pt var(--line);
+  }
+
+  .skill-panel {
+    margin: 3.5mm 0;
+    padding: 4mm;
+    border: 0.3pt solid rgba(31, 78, 95, 0.22);
+    background: var(--soft);
+    break-inside: avoid;
+  }
+
+  .skill-panel::before,
+  .skill-panel::after {
+    display: none;
   }
 
   .intro-section,
@@ -1037,5 +1099,17 @@ time {
 
   .skill-list {
     gap: 1.5mm;
+  }
+
+  .skill-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2mm;
+  }
+
+  .skill-groups article {
+    padding: 2mm 2.4mm;
+    border-left: 1.4pt solid var(--accent);
+    background: rgba(255, 255, 255, 0.62);
+    break-inside: avoid;
   }
 }
