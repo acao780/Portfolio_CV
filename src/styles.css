@@ -77,6 +77,10 @@ nav a {
   text-decoration: none;
 }
 
+a {
+  color: var(--accent);
+}
+
 .contact-strip {
   grid-area: contact;
   display: flex;
@@ -513,6 +517,12 @@ time {
   background: rgba(255, 255, 255, 0.72);
 }
 
+.info-card a {
+  font-weight: 800;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
 .project-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -525,6 +535,10 @@ time {
   background: var(--surface);
   box-shadow: none;
   outline: 1px solid var(--line);
+}
+
+.research-projects article {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .skill-list {
